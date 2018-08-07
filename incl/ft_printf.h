@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 10:04:16 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/07 12:47:16 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/07 14:08:57 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ typedef struct	s_length
 int				ft_printf(const char *format, ...);
 int				ft_wputstr(t_flag *flag, va_list lst);
 void			ft_putnchar(char c, t_flag *flag);
-void			ft_wcharput(wint_t c, t_flag *flag);
+void			ft_wcharput(wchar_t c, t_flag *flag);
 void			conv(char *str, t_flag *flag, va_list lst);
 int				string(t_flag *flag, va_list lst);
 int				interger(t_flag *flag, va_list lst, t_length *length);
