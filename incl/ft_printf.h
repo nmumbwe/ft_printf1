@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 10:04:16 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/07 14:08:57 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/07 14:20:00 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ unsigned int	get_num(t_flag *flag, t_length *length, va_list lst);
 uintmax_t		get_unsigned(va_list lst, t_length *length);
 intmax_t		get_signed(t_flag *flag, t_length *length, va_list lst);
 char			*ft_print_hex(unsigned int value, int base);
-int				size(t_flag *flag, va_list lst);
+int				size(t_flag *flag, va_list lst, t_length *length);
 int				ft_wputchar(t_flag *flag, va_list lst);
 int				long_long(t_flag *flag, va_list lst);
 int				signed_char(t_flag *flag, va_list lst);

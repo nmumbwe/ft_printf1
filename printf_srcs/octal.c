@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 14:04:03 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/07 09:27:13 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/07 15:14:55 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		right_just_oct(char *temp, int i, t_flag *flag)
 	a = flag->zero == 1 ? '0' : ' ';
 	while (i-- > 0)
 		ft_putnchar(a, flag);
-	if (flag->hash == 1)
+	if (flag->hash == 1 && *temp != '0')
 		ft_putnchar('0', flag);
 	while (*temp)
 		ft_putnchar(*(temp)++, flag);
@@ -37,7 +37,7 @@ int		oct_p(char *temp, t_flag *flag)
 		(flag->width - ft_strlen(temp));
 	if (flag->minus == 1)
 	{
-		if (flag->hash == 1)
+		if (flag->hash == 1 && *temp != 0)
 			ft_putnchar('0', flag);
 		while (*(temp))
 			ft_putnchar(*temp++, flag);

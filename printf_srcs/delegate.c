@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/31 09:41:43 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/07 12:19:55 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/07 14:20:49 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		num(t_flag *flag, t_length *length, va_list lst)
 		else if ((flag->type == 'i' || flag->type == 'd') && length->j == 1)
 			return (intmax(flag, lst, length));
 		else if ((flag->type == 'i' || flag->type == 'd') && length->z == 1)
-			return (size(flag, lst));
+			return (size(flag, lst, length));
 		else if (flag->type == 'D')
 			return (long_int(flag, lst));
 		else if (flag->type == 'i' || flag->type == 'd')
