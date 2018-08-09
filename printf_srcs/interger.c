@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 14:00:45 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/07 15:12:59 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/09 09:38:40 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int		interger(t_flag *flag, va_list lst, t_length *length)
 	j = 0;
 	i = get_num(flag, length, lst);
 	temp = ft_itoa_base(i, 10);
-	len = flag->max_width - ft_strlen(temp);
+	len = flag->width - ft_strlen(temp);
 	if (flag->period == 1 && flag->space == 1)
 	{
 		flag->zero = 1;
