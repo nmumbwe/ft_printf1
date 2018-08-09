@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 14:00:45 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/09 10:55:30 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/09 11:04:20 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int		right_just_inte(char *temp, int i, t_flag *flag)
 	int		b;
 
 	a = flag->zero == 1 ? '0' : ' ';
-	b = flag->width - ft_strlen(temp) - i - flag->plus;
-	if (flag->space == 1)
+	b = (2 *(flag->width - ft_strlen(temp) - flag->plus) - flag->space);
+	if (flag->space == 1 && *temp != '-')
 	{
 		b--;
 		ft_putnchar(' ', flag);
