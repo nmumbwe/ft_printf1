@@ -6,13 +6,12 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 14:00:45 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/09 11:04:20 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/09 11:05:34 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/libft/libft.h"
 #include "../incl/ft_printf.h"
-#include <stdio.h>
 
 int		right_just_inte(char *temp, int i, t_flag *flag)
 {
@@ -20,7 +19,7 @@ int		right_just_inte(char *temp, int i, t_flag *flag)
 	int		b;
 
 	a = flag->zero == 1 ? '0' : ' ';
-	b = (2 *(flag->width - ft_strlen(temp) - flag->plus) - flag->space);
+	b = flag->width - ft_strlen(temp) - i - flag->plus;
 	if (flag->space == 1 && *temp != '-')
 	{
 		b--;
