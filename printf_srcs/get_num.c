@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/04 11:12:36 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/09 08:51:47 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/09 11:15:48 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 uintmax_t		get_num(t_flag *flag, t_length *length, va_list lst)
 {
-	uintmax_t	 j;
+	uintmax_t	j;
 
 	j = va_arg(lst, uintmax_t);
 	if (length->hh == 1)
