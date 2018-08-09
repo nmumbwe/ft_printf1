@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 10:04:16 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/07 14:20:00 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/09 08:56:29 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <stdint.h>
 # include <inttypes.h>
 # include <wchar.h>
-# include <stdio.h>
 
 typedef struct	s_flag
 {
@@ -50,7 +49,7 @@ typedef struct	s_length
 int				ft_printf(const char *format, ...);
 int				ft_wputstr(t_flag *flag, va_list lst);
 void			ft_putnchar(char c, t_flag *flag);
-void			ft_wcharput(wchar_t c, t_flag *flag);
+void			ft_wcharput(wint_t c, t_flag *flag);
 void			conv(char *str, t_flag *flag, va_list lst);
 int				string(t_flag *flag, va_list lst);
 int				interger(t_flag *flag, va_list lst, t_length *length);
@@ -72,11 +71,11 @@ char			*manage_precision(char **str, t_flag *flag);
 char			*manage_length(char **str, t_length *length);
 int				delegate(t_flag *flag, t_length *length, va_list lst);
 void			ft_putlong(long c, t_flag *flag);
-unsigned int	get_num(t_flag *flag, t_length *length, va_list lst);
+uintmax_t		get_num(t_flag *flag, t_length *length, va_list lst);
 uintmax_t		get_unsigned(va_list lst, t_length *length);
 intmax_t		get_signed(t_flag *flag, t_length *length, va_list lst);
-char			*ft_print_hex(unsigned int value, int base);
-int				size(t_flag *flag, va_list lst, t_length *length);
+char			*ft_print_hex(uintmax_t value, int base);
+int				size(t_flag *flag, va_list lst);
 int				ft_wputchar(t_flag *flag, va_list lst);
 int				long_long(t_flag *flag, va_list lst);
 int				signed_char(t_flag *flag, va_list lst);

@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/06 09:27:58 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/07 12:41:41 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/09 08:54:09 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*num_lenn(uintmax_t *nu, int base, uintmax_t *sign, int *index)
 	return ((char *)malloc(sizeof(char) * (1 + i)));
 }
 
-char	*ft_print_hex(unsigned int value, int base)
+char	*ft_print_hex(uintmax_t value, int base)
 {
 	uintmax_t			num[2];
 	char				*str;

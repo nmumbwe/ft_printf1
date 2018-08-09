@@ -6,7 +6,7 @@
 /*   By: nmumbwe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/02 13:50:38 by nmumbwe           #+#    #+#             */
-/*   Updated: 2018/08/07 12:52:31 by nmumbwe          ###   ########.fr       */
+/*   Updated: 2018/08/09 08:56:34 by nmumbwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,12 @@ int		uns_p(char *temp, t_flag *flag)
 int		uns_int(t_flag *flag, va_list lst, t_length *length)
 {
 	char			*temp;
-	unsigned int	i;
+	uintmax_t		i;
 	int				j;
-	unsigned int	k;
+	uintmax_t		k;
 
 	j = 0;
 	i = get_num(flag, length, lst);
-	if (flag->type == 'U')
-		i = 4294967296 - i;
 	k = i;
 	temp = ft_print_hex(i, 10);
 	uns_p(temp, flag);
